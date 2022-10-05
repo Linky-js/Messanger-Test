@@ -31,7 +31,7 @@ color: aliceblue;
   }
   .chat-message{
     padding: 5px 10px;
-    margin: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
     background-color: #2e2d35;
     border: solid 1px rgb(2, 2, 2);
