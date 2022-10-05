@@ -1,0 +1,105 @@
+html, body{
+padding: 0;
+margin: 0;
+color: aliceblue;
+}
+.chat-content {
+    display: grid;
+  align-content: end;
+  align-items: end;
+  justify-content: end;
+  flex-grow: 1;
+  padding: 15px 20px 24px 30px;
+  overflow: auto;
+}
+.chat {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  
+    background-image: linear-gradient(to bottom,
+    rgba(14, 84, 212, 1),
+    rgba(224, 168, 12, 1),
+    rgba(85, 12, 7, 0.8),
+    rgba(2, 2, 2, 0.8)
+    );
+  }
+  .chat-message{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #2e2d35;
+    border: solid 1px rgb(2, 2, 2);
+    filter: drop-shadow(3px 3px 2px rgba(254, 255, 254, 1));
+  }
+  .chat-form input, .chat-form button {
+    border: none;
+    outline: none;
+    border-radius: 3px;
+  }
+  .chat-form input {
+    width: 100%;
+    height: 50px;
+    background: #F9F0DA;
+    padding-left: 15px;
+  }
+  
+  .chat-form button{
+    width: auto;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+.chat-form button:hover {
+    background-position: right center;
+}
+.chat-message-name {
+    font-size: small;
+    color:rgb(6, 128, 117, 0.8)
+}
+.chat-message-button{
+    position: absolute;
+  width: 18px;
+  height: 18px;
+  top: -5px;
+  right: -5px;
+  padding: 0;
+
+  visibility: hidden;
+
+  background-color: #ffffff;
+  background-image: url("C:\Users\Роман\Desktop\мессенджер\img\icon.svg");
+  content: '';
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 50%;
+  font: inherit;
+  font-size: 0;
+  user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+.chat-message:hover .chat-message-button,
+.chat-message:focus .chat-message-button {
+  visibility: visible;
+}
+
+.chat-message:focus-within .chat-message-button {
+  visibility: visible;
+}
